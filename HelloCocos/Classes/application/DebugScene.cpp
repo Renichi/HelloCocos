@@ -21,6 +21,7 @@ enum MENU {
 	MENU_HELLO_WORLD,
 	MENU_LIFE_GAME,
 	MENU_SHOOTING,
+	MENU_LIFEGAME2,
 
 	MENU_MAX
 };
@@ -31,6 +32,7 @@ static const char *const MENU_NAME[ MENU_MAX ] = {
 	"HelloWorld",
 	"LifeGame",
 	"Shooting"
+	"LifeGame2",
 };
 
 // メニュー処理
@@ -38,7 +40,8 @@ std::function<void(void)> MENU_FUNC[ MENU_MAX ] = {
 	[]{ Director::getInstance()->setDisplayStats( !Director::getInstance()->isDisplayStats() ); },
 	[]{ GameManager::getInstance()->pushScene( CreateScene( SceneID::HELLO_WORLD ) ); },
 	[]{ GameManager::getInstance()->pushScene( CreateScene( SceneID::LIFE_GAME ) ); },
-	[]{ GameManager::getInstance()->pushScene( CreateScene( SceneID::SHOOTING ) ); }
+	[]{ GameManager::getInstance()->pushScene( CreateScene( SceneID::SHOOTING ) ); },
+	[]{ GameManager::getInstance()->pushScene(CreateScene(SceneID::SHOOTING)); }
 };
 
 DebugScene::DebugScene() :

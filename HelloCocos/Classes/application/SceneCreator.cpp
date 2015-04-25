@@ -6,6 +6,7 @@
 #include "HelloWorld/HelloWorldScene.h"
 #include "LifeGame/LifeGameScene.h"
 #include "Shooting/ShootingScene.h"
+#include "LifeGame2/LifeGame2Scene.h"
 
 #ifndef NDEBUG
 #include "DebugScene.h"
